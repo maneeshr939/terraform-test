@@ -8,9 +8,11 @@ resource "azurerm_linux_virtual_machine" "demo" {
   network_interface_ids = [
     azurerm_network_interface.vm.id
   ]
+
   disable_password_authentication = false
+
   os_disk {
-    caching              = "ReadWrite"
+    caching              = "ReadOnly"
     storage_account_type = "Standard_LRS"
   }
 
