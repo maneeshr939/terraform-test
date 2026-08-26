@@ -1,7 +1,7 @@
 variable "location" {
   description = "Azure region"
   type        = string
-  default     = "Central India"
+  default     = "East US"
 }
 
 variable "resource_group_name" {
@@ -31,12 +31,17 @@ variable "vm_name" {
 variable "vm_size" {
   description = "Azure VM size"
   type        = string
-  default     = "Standard_B2s"
+  default     = "Standard_D2s_v3"
 }
 
 variable "admin_username" {
   description = "Linux VM admin username"
   type        = string
   default     = "azureadmin"
+}
+
+variable "admin_password" {
+  description = "Linux VM admin password"
+  type        = string
 }
 

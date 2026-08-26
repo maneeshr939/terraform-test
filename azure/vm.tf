@@ -4,11 +4,11 @@ resource "azurerm_linux_virtual_machine" "demo" {
   location            = azurerm_resource_group.demo.location
   size                = var.vm_size
   admin_username      = var.admin_username
-
+  admin_password      = var.admin_password
   network_interface_ids = [
     azurerm_network_interface.vm.id
   ]
-
+  disable_password_authentication = false
   os_disk {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
